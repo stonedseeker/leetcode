@@ -1,0 +1,81 @@
+Dow's Law:
+        In a hierarchical organization, the higher the level,
+        the greater the confusion.
+
+DSA/leetcode/recursion via ☕ v21.0.1 on ☁️  (us-east-1) 
+❯ mv sumTriangle.java SumTriangle.java 
+
+DSA/leetcode/recursion via ☕ v21.0.1 on ☁️  (us-east-1) 
+❯ mv sumTriangle.java SumTriangle.java
+
+DSA/leetcode/recursion via ☕ v21.0.1 on ☁️  (us-east-1) 
+❯ javaa sumTriangle.java
+fish: Unknown command: javaa
+
+DSA/leetcode/recursion via ☕ v21.0.1 on ☁️  (us-east-1) 
+❯ java sumTriangle.java
+Error: Could not find or load main class sumTriangle.java
+Caused by: java.lang.ClassNotFoundException: sumTriangle.java
+
+DSA/leetcode/recursion via ☕ v21.0.1 on ☁️  (us-east-1) 
+❯ java SumTriangle.java
+SumTriangle.java:4: error: <identifier> expected
+    int public static void main(String[] args) {
+       ^
+1 error
+error: compilation failed
+
+DSA/leetcode/recursion via ☕ v21.0.1 on ☁️  (us-east-1) 
+❯ java SumTriangle.java
+SumTriangle.java:4: error: <identifier> expected
+    int public static void main(String[] args) {
+       ^
+1 error
+error: compilation failed
+
+DSA/leetcode/recursion via ☕ v21.0.1 on ☁️  (us-east-1) 
+❯ java SumTriangle.java
+SumTriangle.java:4: error: <identifier> expected
+    int public static void main(String[] args) {
+       ^
+1 error
+error: compilation failed
+
+DSA/leetcode/recursion via ☕ v21.0.1 on ☁️  (us-east-1) 
+❯ mv sumTriangle.java SumTriangle.java
+
+DSA/leetcode/recursion via ☕ v21.0.1 on ☁️  (us-east-1) 
+❯ java SumTriangle.java
+SumTriangle.java:16: error: cannot find symbol
+            temp[i] = arr[i] + arr[i + 1];
+                      ^
+  symbol:   variable arr
+  location: class SumTriangle
+SumTriangle.java:16: error: cannot find symbol
+            temp[i] = arr[i] + arr[i + 1];
+                               ^
+  symbol:   variable arr
+  location: class SumTriangle
+2 errors
+error: compilation failed
+
+DSA/leetcode/recursion via ☕ v21.0.1 on ☁️  (us-east-1) 
+❯ java SumTriangle.java
+SumTriangle.java:16: error: cannot find symbol
+            temp[i] = arr[i] + arr[i + 1];
+                      ^
+  symbol:   variable arr
+  location: class SumTriangle
+SumTriangle.java:16: error: cannot find symbol
+            temp[i] = arr[i] + arr[i + 1];
+                               ^
+  symbol:   variable arr
+  location: class SumTriangle
+2 errors
+error: compilation failed
+
+DSA/leetcode/recursion via ☕ v21.0.1 on ☁️  (us-east-1) 
+❯ mv sumTriangle.java SumTriangle.java
+
+DSA/leetcode/recursion via ☕ v21.0.1 on ☁️  (us-east-1) 
+❯ 
