@@ -1,11 +1,11 @@
 
-from typing import Optional
+from typing import List, Optional
 from collections import deque
 
 class ListNode:
     def __init__(self, val = 0, next = None) -> None:
-        this.val = val 
-        this.next = next
+        self.val = val 
+        self.next = next
 
 
 
@@ -17,19 +17,26 @@ class TreeNode:
 
 
 class Solution:
-    def flatten(self, root: Optional[TreeNode]) -> None:
+    def flatten(self, root: Optional[TreeNode]) -> Optional[ListNode]:
         
         def dfs(root, q):
             if root:
+                q.append(root)
                 dfs(root.left, q)
                 dfs(root.right, q)
-                q.append(root)
+        
 
         q = deque()
         dfs(root, q)
 
+        head = node = ListNode(0, None)
+
         while q:
-            print(q.popleft().val)
+            
+            node.next = ListNode(q.popleft().val)
+            node = node.next
+
+        return head.next
 
 
     
@@ -46,4 +53,8 @@ node5 = TreeNode(5, None, node6)
 node1 = TreeNode(1, node2, node5)
 
 
-print(Solution().flatten(node1))
+curr =  Solution().flatten(node1)
+
+while curr:
+    print(curr.val)
+    curr = curr.next
