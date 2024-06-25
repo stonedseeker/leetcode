@@ -1,7 +1,4 @@
 class Solution:
-    def subsets(self, nums, res, lst):
-        pass
-
     def dfs(self, nums, i, res, lst):
         
         if i == len(nums):

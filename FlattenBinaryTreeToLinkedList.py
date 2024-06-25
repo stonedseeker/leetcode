@@ -1,3 +1,9 @@
+'''
+Check if the node at you are at has a left child, 
+    if yes:
+        find rightmost element for if and do rigtmost element = curr.right and convert left child tp right child
+'''
+
 
 from typing import List, Optional
 from collections import deque
@@ -17,7 +23,7 @@ class TreeNode:
 
 
 class Solution:
-    def flatten(self, root: Optional[TreeNode]) -> Optional[ListNode]:
+    def flatten1(self, root: Optional[TreeNode]) -> Optional[ListNode]:
         
         def dfs(root, q):
             if root:
@@ -39,7 +45,21 @@ class Solution:
         return head.next
 
 
-    
+    def flatten(self, root: Optional[TreeNode]) -> Optional[ListNode]:
+
+        curr = root
+        while curr:
+            if curr.left:
+                temp = curr.left
+                while temp.right:
+                    temp = temp.right
+                    
+                temp.right = curr.right
+                curr.right = curr.left
+                curr.left=None
+                
+            curr = curr.right
+
 
         
 

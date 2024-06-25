@@ -8,17 +8,7 @@ class TreeNode:
 
 class Solution:
     def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
-    #     
-    #
-    #     def dfs(node):
-    #         if node:
-    #             lst.append(node.val)
-    #             if node.left: dfs(node.left)
-    #             if node.right: dfs(node.right)
-    #
-    #     lst = []
-    #     dfs(root)
-    #     return lst
+   
 
         def recursive(root, stack = []):
             if root is None:
