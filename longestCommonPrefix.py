@@ -2,23 +2,18 @@ from typing import List
 
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
-        
-        if not strs:
-            return "" 
-            
-        min_str = [x for x in strs if len(x) == min(len(i) for i in strs)]
-        print(min_str)
-        min_str = min_str[0]
-        print(min_str)
+        mini, maxi = [x for x in strs if len(x) == min(len(i) for i in strs)], [x for x in strs if len(x) == max(len(i) for i in strs)]
+        mini = mini[0]
+        maxi = maxi[0]
+        print(mini, maxi, sep = ' ')
 
-        
+        mini, maxi = min(strs), max(strs)
+        print(mini, maxi, sep = ' ')
 
-        res = ""
-        for i in range(len(min_str)):
-            if all(strs[i]) == min_str[i]:
-                print(i)
-                res  += min_str[i]
+        for i in range(len(mini)):
+            if mini[i] != maxi[i]:
+                return mini[:i]
+        return ""
 
-        return res
 strs = ["flower","flow","flight"]
 print(Solution().longestCommonPrefix(strs))
