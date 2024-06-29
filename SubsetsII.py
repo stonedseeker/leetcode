@@ -5,20 +5,20 @@ class Solution:
         res = set()
         lst = []
 
+        nums.sort()
+        print(nums)
+
         def dfs(index, nums, lst, res):
             if index == len(nums):
                 res.add(tuple(lst.copy()))
-                print(res)
                 return
             lst.append(nums[index])
             dfs(index + 1, nums, lst, res)
             lst.pop(len(lst) - 1)
             dfs(index + 1, nums, lst, res)
         dfs(0, nums, lst, res)
-        print(res)
         res = [list(x) for x in res]
-        print(res)
-        return list(res) 
+        return list(res)
 
-nums = [1,2,2]
+nums = [4,4,4,1,4]
 print(Solution().subsetsWithDup(nums))
