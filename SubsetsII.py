@@ -2,23 +2,32 @@ from typing import List
 
 class Solution:
     def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
-        res = set()
-        lst = []
 
         nums.sort()
-        print(nums)
 
         def dfs(index, nums, lst, res):
-            if index == len(nums):
-                res.add(tuple(lst.copy()))
-                return
-            lst.append(nums[index])
-            dfs(index + 1, nums, lst, res)
-            lst.pop(len(lst) - 1)
-            dfs(index + 1, nums, lst, res)
-        dfs(0, nums, lst, res)
-        res = [list(x) for x in res]
-        return list(res)
+            res.append(lst.copy())
 
-nums = [4,4,4,1,4]
+            for i in range(index, len(nums)):
+                if i != index and nums[i] == nums[i - 1]:
+                    continue
+                else:
+                    lst.append(nums[i])
+                    dfs(i + 1, nums, lst, res)
+                    lst.pop()
+                
+            
+
+
+
+        res = []
+        lst = []
+
+        dfs(0, nums, lst, res)
+
+        return res
+
+
+nums = [1,2,2]
 print(Solution().subsetsWithDup(nums))
+       
