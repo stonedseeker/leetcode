@@ -1,7 +1,27 @@
 from typing import List
 
-class Solution: 
+class Solution:
+
     def permute(self, nums: List[int]) -> List[List[int]]:
+
+            res = []
+
+            def dfs(start, res):
+                if start == len(nums):
+                    res.append(nums.copy())
+                    return
+                for i in range(start, len(nums)):
+                    nums[start], nums[i] = nums[i], nums[start]
+                    dfs(start + 1, res)
+                    nums[start], nums[i] = nums[i], nums[start]
+            dfs(0, res)
+            return res
+                
+                
+
+
+
+    def permute_with_space(self, nums: List[int]) -> List[List[int]]:
         
         map = {}
         for i in nums:
