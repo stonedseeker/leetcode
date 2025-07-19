@@ -33,7 +33,7 @@ class Solution:
         return dp[m][n]
 
 
-print(Solution().lcs("heap", "pea"))
+print(Solution().lcs("abcd", "abced"))
 
 
 
